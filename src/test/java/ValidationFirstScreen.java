@@ -2,7 +2,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import page.firstScreen.FirstScreenInitAccounts;
+import pages.firstScreen.FirstScreenInitAccounts;
 import utilites.GenerateCodePage;
 import utilites.ParserJson;
 
@@ -105,7 +105,5 @@ public class ValidationFirstScreen {
     @AfterMethod
     public void finalized(){
         clearBrowserCookies();
-        //switchTo().window(0).close();
-      //  switchTo().alert().accept();
     }
 }
