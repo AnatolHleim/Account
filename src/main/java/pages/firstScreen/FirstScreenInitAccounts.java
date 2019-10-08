@@ -19,6 +19,7 @@ public class FirstScreenInitAccounts {
     private SelenideElement errorCheckBoxValidation = $(By.id("ConditionAgree-error"));
     private SelenideElement setValueSMSCode = $(By.id("todo"));
     private SelenideElement buttonSubmit = $(By.id("todo"));
+    private SelenideElement ku = $(By.className("content-container__title"));
 
     public FirstScreenInitAccounts inputDataUNPField(String text) {
         setValueInputUNP.val(text);
@@ -26,6 +27,7 @@ public class FirstScreenInitAccounts {
     }
 
     public FirstScreenInitAccounts inputDataPhoneField(String text) {
+        ku.waitUntil(Condition.text("счета"),10000);
         setValueInputPhone.sendKeys(HOME);
         setValueInputPhone.sendKeys(text);
         return this;
@@ -53,6 +55,7 @@ public class FirstScreenInitAccounts {
 
     public FirstScreenInitAccounts clickCheckBoxAgree() {
         inputCheckBoxAgree.shouldNot(Condition.checked).click();
+
         return this;
     }
 
